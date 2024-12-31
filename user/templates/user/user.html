@@ -1,11 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amder Kachua</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amder Kachua</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Hi from amader kachua</h1>
+<body class="bg-gray-50">
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden">
+    <div class="container mx-auto px-6 lg:px-16 py-20 relative z-10">
+      
+      <!-- Decorative Elements -->
+      <div class="absolute top-0 left-0 w-64 h-64 bg-indigo-200 rounded-full mix-blend-multiply blur-xl opacity-30 -z-10"></div>
+      <div class="absolute bottom-10 right-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply blur-xl opacity-30 -z-10"></div>
+
+      <!-- Content Wrapper -->
+      <div class="lg:flex lg:items-center lg:justify-between">
+        
+        <!-- Text Content -->
+        <div class="max-w-3xl text-center lg:text-left">
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-gray-900">
+            Welcome to <span class="text-indigo-600">Amder Kachua</span>
+          </h1>
+          <p class="mt-6 text-lg text-gray-600">
+            A vibrant hub of innovation, community, and endless possibilities. Join us in shaping the future while embracing the traditions that define us.
+          </p>
+          <div class="mt-8 flex justify-center lg:justify-start space-x-6">
+            <a href="#" class="px-8 py-3 text-white bg-indigo-600 hover:bg-indigo-700 rounded-full font-medium shadow-lg transform hover:scale-105 transition duration-300">
+              Explore More
+            </a>
+            <a href="#" class="px-8 py-3 text-indigo-600 bg-indigo-100 hover:bg-indigo-200 rounded-full font-medium shadow-lg transform hover:scale-105 transition duration-300">
+              Contact Us
+            </a>
+          </div>
+        </div>
+
+        <!-- Image & Icons -->
+        <div class="mt-12 lg:mt-0 lg:w-1/2 flex justify-center relative">
+          <div class="relative">
+            <img 
+              src="https://via.placeholder.com/500x400" 
+              alt="Amder Kachua" 
+              class="rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
+            >
+            <div class="absolute -top-10 -left-10 bg-indigo-500 text-white rounded-full p-5 shadow-lg transform hover:rotate-6 transition duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11M9 21V3m-4 18h8a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div class="absolute bottom-10 right-10 bg-blue-500 text-white rounded-full p-5 shadow-lg transform hover:rotate-6 transition duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A2 2 0 009 11v8m5-8h.01M15 5a3 3 0 01-3-3 3 3 0 013 3z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
