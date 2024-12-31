@@ -7,74 +7,80 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     /* Animated Gradient Background */
-    .gradient-bg {
-      background: linear-gradient(90deg, #4f46e5, #3b82f6, #0ea5e9);
-      background-size: 600% 600%;
-      animation: gradientAnimation 8s ease infinite;
+    .animated-bg {
+      background: linear-gradient(135deg, #4f46e5, #3b82f6, #22d3ee);
+      background-size: 400% 400%;
+      animation: gradientMove 10s ease infinite;
     }
 
-    @keyframes gradientAnimation {
+    @keyframes gradientMove {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
 
-    /* Subtle Floating Animation */
-    .animate-float {
+    /* Floating Animation */
+    .float {
       animation: float 6s ease-in-out infinite;
     }
 
     @keyframes float {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    /* Button Hover Animation */
+    .hover-effect:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
     }
   </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-900 text-white">
 
   <!-- Hero Section -->
-  <section class="relative gradient-bg text-white overflow-hidden">
-    <!-- Content Wrapper -->
-    <div class="container mx-auto px-6 lg:px-16 py-16 lg:py-20 relative z-10">
+  <section class="relative animated-bg min-h-screen flex items-center justify-center">
+    <!-- Background Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-10 left-10 w-96 h-96 bg-indigo-500 opacity-20 blur-3xl rounded-full float"></div>
+      <div class="absolute bottom-10 right-10 w-80 h-80 bg-blue-400 opacity-30 blur-3xl rounded-full float"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center lg:text-left max-w-7xl mx-auto px-6 lg:px-16">
       <div class="lg:flex lg:items-center lg:justify-between">
-        
-        <!-- Text Content -->
-        <div class="max-w-lg text-center lg:text-left">
-          <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight">
+        <!-- Left: Text -->
+        <div class="lg:w-1/2">
+          <h1 class="text-5xl lg:text-7xl font-extrabold mb-6 leading-tight">
             Welcome to <span class="text-yellow-400">Amder Kachua</span>
           </h1>
-          <p class="mt-4 text-lg text-gray-100">
-            A place where innovation meets culture. Together, let's explore the extraordinary while embracing our roots.
+          <p class="text-lg lg:text-xl text-gray-200 mb-8">
+            Discover the blend of innovation and culture at Amder Kachua. Let us inspire and create together for a brighter tomorrow.
           </p>
-          <div class="mt-6 flex justify-center lg:justify-start space-x-4">
-            <a href="#" class="px-6 py-3 bg-yellow-400 text-gray-900 rounded-full font-medium shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+          <div class="flex space-x-4 justify-center lg:justify-start">
+            <a href="#" class="px-6 py-3 bg-yellow-400 text-gray-900 font-medium rounded-lg shadow-lg hover:bg-yellow-500 hover-effect transition transform">
               Get Started
             </a>
-            <a href="#" class="px-6 py-3 border border-white text-white rounded-full font-medium shadow-lg hover:bg-white hover:text-gray-900 transform hover:scale-105 transition duration-300">
+            <a href="#" class="px-6 py-3 bg-transparent border border-yellow-400 text-yellow-400 font-medium rounded-lg shadow-lg hover:bg-yellow-400 hover:text-gray-900 hover-effect transition transform">
               Learn More
             </a>
           </div>
         </div>
 
-        <!-- Image Section -->
-        <div class="mt-10 lg:mt-0 lg:w-1/2 flex justify-center relative">
-          <div class="relative">
-            <img 
-              src="https://via.placeholder.com/500x400" 
-              alt="Amder Kachua" 
-              class="rounded-xl shadow-2xl transform hover:scale-105 transition duration-300"
-            >
-            <!-- Floating Decorative Icons -->
-            <div class="absolute -top-10 -left-10 bg-yellow-400 text-gray-900 p-4 rounded-full shadow-lg animate-float">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <!-- Right: Image with Floating Elements -->
+        <div class="mt-10 lg:mt-0 lg:w-1/2 relative">
+          <div class="relative w-full max-w-lg mx-auto">
+            <div class="absolute -top-8 -left-8 w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg float">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A2 2 0 009 11v8m5-8h.01M15 5a3 3 0 01-3-3 3 3 0 013 3z" />
               </svg>
             </div>
-            <div class="absolute bottom-10 right-10 bg-white text-indigo-600 p-4 rounded-full shadow-lg animate-float">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div class="absolute -bottom-8 -right-8 w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center shadow-lg float">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11M9 21V3m-4 18h8a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z" />
               </svg>
             </div>
+            <img src="https://via.placeholder.com/500x400" alt="Amder Kachua" class="rounded-lg shadow-xl transform hover:scale-105 transition duration-500">
           </div>
         </div>
       </div>
@@ -83,7 +89,7 @@
     <!-- Decorative Bottom Wave -->
     <div class="absolute bottom-0 w-full">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#ffffff" fill-opacity="1" d="M0,224L40,202.7C80,181,160,139,240,117.3C320,96,400,96,480,112C560,128,640,160,720,165.3C800,171,880,149,960,154.7C1040,160,1120,192,1200,208C1280,224,1360,224,1400,224L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+        <path fill="#ffffff" fill-opacity="0.1" d="M0,192L80,181.3C160,171,320,149,480,154.7C640,160,800,192,960,181.3C1120,171,1280,117,1360,90.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
       </svg>
     </div>
   </section>
