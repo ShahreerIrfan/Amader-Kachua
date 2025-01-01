@@ -6,11 +6,12 @@ from django.contrib.auth.models import User
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    phohne_number = models.CharField(max_length=20,null= True)
+    phone_number = models.CharField(max_length=20,null= True)
     village = models.CharField(max_length=80,null= True)
     photo = models.ImageField(upload_to="user/profile_photo",null= True)
     cover_photo = models.ImageField(upload_to="user/cover_photo",null= True)
     union = models.CharField(max_length=40,null=True, blank=True)
+    ward = models.CharField(max_length=40, null= True, blank=True)
     district = models.CharField(max_length=30,null= True)
     address = models.TextField(null=True)
     blood_group = models.CharField(max_length=3, null=True, blank=True)
