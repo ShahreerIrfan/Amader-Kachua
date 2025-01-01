@@ -39,3 +39,22 @@ class UserProfileSerializer(serializers.ModelSerializer):
         user_profile = UserProfile.objects.create(user=user, **validated_data)
 
         return user_profile
+
+
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+
+class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
+    @classmethod
+    def get_token(cls, user):
+        token = super().get_token(user)
+
+        # Add custom claims
+        token['user_id'] = user.id
+        return token
+
+    def validate(self, attrs):
+        data = super().validate(attrs)
+
+        # Add user_id to the response
+        data['user_id'] = self.user.id
+        return data
