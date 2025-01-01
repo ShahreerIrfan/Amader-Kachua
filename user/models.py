@@ -9,6 +9,7 @@ class UserProfile(models.Model):
     phohne_number = models.CharField(max_length=20,null= True)
     village = models.CharField(max_length=80,null= True)
     photo = models.ImageField(upload_to="user/profile_photo",null= True)
+    cover_photo = models.ImageField(upload_to="user/cover_photo",null= True)
     union = models.CharField(max_length=20, choices=UNION_CHOICES, null=True, blank=True)
     district = models.CharField(max_length=30,null= True)
     address = models.TextField(null=True)
