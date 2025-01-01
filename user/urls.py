@@ -8,6 +8,6 @@ router.register(r'profiles', UserProfileViewSet, basename='userprofile')
 
 urlpatterns = [
     path('', include(router.urls)),  # Automatically handles CRUD operations
-    # path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),  # JWT Token Obtain
-    # path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),  # JWT Token Refresh
+    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),  # JWT Token Obtain
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),  # JWT Token Refresh
 ]
