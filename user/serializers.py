@@ -49,13 +49,27 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     def get_token(cls, user):
         token = super().get_token(user)
 
-        # Add custom claims
+        # Add custom claims (user_id is optional, already in payload)
         token['user_id'] = user.id
+
+        # Include UserProfile ID
+        try:
+            user_profile = UserProfile.objects.get(user=user)
+            token['user_profile_id'] = user_profile.id
+        except UserProfile.DoesNotExist:
+            token['user_profile_id'] = None  # Handle case where no UserProfile exists
+
         return token
 
     def validate(self, attrs):
         data = super().validate(attrs)
 
-        # Add user_id to the response
+        # Add user_id and UserProfile ID to the response
         data['user_id'] = self.user.id
+        try:
+            user_profile = UserProfile.objects.get(user=self.user)
+            data['user_profile_id'] = user_profile.id
+        except UserProfile.DoesNotExist:
+            data['user_profile_id'] = None  # Handle case where no UserProfile exists
+
         return data
