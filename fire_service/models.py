@@ -1,6 +1,6 @@
 from django.db import models
 
-class Fire_Station(models.Model):
+class FireStation(models.Model):
     name = models.CharField(max_length=200,null=True, blank=True)
     image  = models.ImageField(upload_to="Fire_service/images",null=True,blank=True)
     location = models.CharField(max_length=255,null=True, blank=True)

@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import Fire_Station
+from .models import FireStation
 
 class FireServiceSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Fire_Station
+        model = FireStation
         fields = '__all__'  # Correct spelling of 'fields'
