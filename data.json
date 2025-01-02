@@ -1,0 +1,52 @@
+[
+    {
+        "model": "fire_service.fire_station",
+        "pk": 3,
+        "fields": {
+            "name": "চাঁদপুর ফায়ার সার্ভিস",
+            "location": "চাঁদপুর সদর, চাঁদপুর",
+            "phone": "০২৩৪৫৬৭৮৯০১",
+            "mobile": "০১৮১১-২২৩৩৪৪"
+        }
+    },
+    {
+        "model": "fire_service.fire_station",
+        "pk": 4,
+        "fields": {
+            "name": "মতলব ফায়ার সার্ভিস",
+            "location": "মতলব দক্ষিণ, চাঁদপুর",
+            "phone": "০২৩৪৫৬৭৮৯০২",
+            "mobile": "০১৮১১-২২৩৩৪৫"
+        }
+    },
+    {
+        "model": "fire_service.fire_station",
+        "pk": 5,
+        "fields": {
+            "name": "ফরিদগঞ্জ ফায়ার সার্ভিস",
+            "location": "ফরিদগঞ্জ উপজেলা, চাঁদপুর",
+            "phone": "০২৩৪৫৬৭৮৯০৩",
+            "mobile": "০১৮১১-২২৩৩৪৬"
+        }
+    },
+    {
+        "model": "fire_service.fire_station",
+        "pk": 6,
+        "fields": {
+            "name": "লক্ষ্মীপুর ফায়ার সার্ভিস",
+            "location": "লক্ষ্মীপুর সদর, লক্ষ্মীপুর",
+            "phone": "০২৩৪৫৬৭৮৯০৪",
+            "mobile": "০১৮১১-২২৩৩৪৭"
+        }
+    },
+    {
+        "model": "fire_service.fire_station",
+        "pk": 7,
+        "fields": {
+            "name": "নোয়াখালী ফায়ার সার্ভিস",
+            "location": "মাইজদী, নোয়াখালী",
+            "phone": "০২৩৪৫৬৭৮৯০৫",
+            "mobile": "০১৮১১-২২৩৩৪৮"
+        }
+    }
+]

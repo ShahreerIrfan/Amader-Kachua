@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist', 
     'corsheaders', 
     'doctor',
+    'fire_service',
 ]
 
 MIDDLEWARE = [
