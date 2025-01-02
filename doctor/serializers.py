@@ -13,7 +13,7 @@ class AvailabilitySerializer(serializers.ModelSerializer):
 
 class DoctorSerializer(serializers.ModelSerializer):
     contact = ContactSerializer()
-    availability = AvailabilitySerializer(many=True)  # Remove 'source' argument
+    availability = AvailabilitySerializer(many=True)  
     photo = serializers.ImageField(required=False)
 
     class Meta:
