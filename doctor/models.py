@@ -30,7 +30,8 @@ class Doctor(models.Model):
     specialty = models.CharField(max_length=100)
     location = models.CharField(max_length=200)
     contact = models.OneToOneField(Contact, related_name="doctor", on_delete=models.CASCADE)
-    photo = models.ImageField(upload_to='Doctor/doctor_photos/', null=True, blank=True)  # Added photo field
+    photo = models.ImageField(upload_to='Doctor/doctor_photos/', null=True, blank=True) 
 
     def __str__(self):
         return f"{self.name} - {self.specialty}"
+# 
